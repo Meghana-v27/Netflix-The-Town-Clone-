@@ -1,0 +1,514 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: radial-gradient(rgb(38, 37, 37),black,rgb(42, 39, 39));
+    color: #fff;
+    width: 100%;
+    min-height: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.logo{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 36px;
+}
+
+.logo img{
+    height: 60px;
+    width: 200px;
+    display: block;
+    mix-blend-mode:saturation; 
+}
+
+.logo button{
+    height: 40px;
+    width: 85px;
+    background-color: #fff;
+    color: #000;
+    font-size: 15px;
+    font-weight: 800;
+    border: none;
+    border-radius: 24px;
+    cursor: pointer;
+}
+
+.logo button:hover{
+    background-color: #e6e6e6;
+}
+
+
+
+.first-nav{
+    display: flex;
+    justify-content: center;
+    width: fit-content;
+    margin: 0 auto 14px;
+    padding: 7px 10px;
+    background: rgba(12, 12, 12, 0.9);
+    border-radius: 30px;
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.55);
+}
+
+.first{
+    background: transparent;
+    border: none;
+    color: #c4c4c4;
+    font-size: 15px;
+    font-weight: 700;
+    padding: 10px 22px;
+    border-radius: 24px;
+    cursor: pointer;
+    transition: color .2s, background .2s;
+}
+
+.first:hover{
+    color: #fff;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+
+.video-wrapper{
+    position: relative;
+    height: 600px;
+    width: 96%;
+    max-width: 1400px;
+    margin: 0 auto;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.22);
+    overflow: hidden;
+    background: #000;
+}
+
+video{
+    display: block;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border: none;
+    border-radius: 0;
+}
+
+.video-wrapper::after{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0,0,0,.92) 0%, rgba(0,0,0,.55) 35%, rgba(0,0,0,0) 65%);
+    pointer-events: none;
+    z-index: 1;
+}
+
+.overlay-content{
+    position: absolute;
+    left: 60px;
+    bottom: 40px;
+    width: 390px;
+    max-width: calc(100% - 40px);
+    z-index: 2;
+}
+
+.movie-logo{
+    text-align: left;
+    margin: 0 0 20px;
+}
+
+.movie-logo img{
+    height: 90px;
+    width: auto;
+    display: block;
+}
+
+
+.signup{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.email-input{
+    display: block;
+    width: 100%;
+    height: 70px;
+    padding: 0 20px;
+    margin-bottom: 16px;
+    border-radius: 40px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    background: rgba(20, 20, 20, 0.75);
+    color: #fff;
+    font-size: 17px;
+}
+
+.email-input::placeholder{
+    color: #b3b3b3;
+}
+
+.email-input:focus{
+    outline: 2px solid #fff;
+    outline-offset: 2px;
+}
+
+.join-button{
+    display: block;
+    width: 300px;
+    max-width: 100%;
+    height: 50px;
+    margin: 0 auto 14px;
+    border: none;
+    border-radius: 30px;
+    background: #e50914;
+    color: #fff;
+    font-size: 17px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background .2s;
+}
+
+.join-button:hover{
+    background: #c40812;
+}
+
+.fine{
+    color: #fff;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.content{
+    width: 90%;
+    max-width: 1300px;
+    min-height: 130px;
+    margin: 30px auto 0;
+    padding: 10px 0 20px;
+    background-color: #111313;
+    border-radius: 15px;
+    font-weight: bold;
+}
+
+.content h4{
+    color: #fff;
+    font-size: 22px;
+    padding: 20px 0 0 30px;
+}
+
+.content h5{
+    color: #ccc;
+    font-size: 15px;
+    padding: 15px 30px 0;
+}
+
+
+.moredetails{
+    width: 90%;
+    max-width: 1300px;
+    margin: 40px auto 0;
+}
+
+.moredetails h2{
+    color: #eee;
+    padding-top: 10px;
+    margin-bottom: 20px;
+}
+
+.moredetails-grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.detail-card{
+    background-color: rgba(11, 16, 16, 0.7);
+    border-radius: 15px;
+    padding: 24px 28px;
+}
+
+.detail-card h6{
+    color: #eee;
+    font-size: 15px;
+    margin-top: 16px;
+}
+
+.detail-card h6:first-child{
+    margin-top: 0;
+}
+
+.detail-card p{
+    color: #ccc;
+    font-size: 14px;
+    line-height: 1.5;
+    margin-top: 4px;
+}
+
+
+.youalsolike,
+.trending-now{
+    width: 90%;
+    max-width: 1300px;
+    color: #f7f4f4;
+    font-size: 20px;
+}
+
+.youalsolike{
+    margin: 40px auto 0;
+}
+
+.trending-now{
+    margin: 60px auto 0;
+}
+
+.imgs,
+.imgs-2{
+    width: 90%;
+    max-width: 1300px;
+    margin: 20px auto 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px 2px;
+}
+
+.imgs img,
+.imgs-2 img{
+    height: 350px;
+    width: 14%;
+    padding: 10px;
+    object-fit: cover;
+    border-radius: 25px;
+    transition: transform .25s ease;
+}
+
+.imgs img:hover,
+.imgs-2 img:hover{
+    transform: scale(1.05);
+}
+
+
+.aplan{
+    width: 90%;
+    max-width: 1300px;
+    margin: 60px auto 0;
+}
+
+.aplan h2{
+    color: #eee;
+    padding-top: 10px;
+    margin-bottom: 20px;
+}
+
+.plans-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 30px;
+}
+
+.plan{
+    position: relative;
+    height: 280px;
+    display: flex;
+    flex-direction: column;
+    padding: 30px 28px;
+    background: linear-gradient(rgb(21, 21, 93), rgb(25, 6, 77));
+    border-radius: 15px;
+    transition: background .3s;
+}
+
+.plan.popular{
+    background: rgb(25, 6, 77);
+}
+
+.plan:hover{
+    background: linear-gradient(rgb(244, 68, 221), rgb(25, 6, 77));
+}
+
+.plan h3{
+    color: #eee;
+}
+
+.plan h5{
+    color: #d1cfcf;
+    margin: 4px 0 10px;
+}
+
+.plan p{
+    color: #ccc;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.badge{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    background: #2d0557;
+    color: #fff;
+    font-size: 16px;
+    padding: 16px 14px;
+    border-radius: 0  14px 0 16px ;
+}
+
+.badge h3{
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.price{
+    margin-top: auto;
+    color: #fff;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.price span{
+    color: #ccc;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.discover{
+    position: relative;
+    width: 90%;
+    max-width: 1300px;
+    margin: 50px auto 0;
+}
+
+.discover img{
+    display: block;
+    width: 100%;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.discover h2{
+    position: absolute;
+    top: 50%;
+    left: 30px;
+    transform: translateY(-50%);
+    color: #fff;
+    font-size: 22px;
+}
+
+
+.last{
+    display: flex;
+    justify-content: center;
+}
+
+.last button{
+    width: 200px;
+    margin: 50px 0;
+}
+
+
+.footer{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 30px 40px;
+    max-width: 1000px;
+    margin: 30px auto 0;
+    padding: 30px 50px 60px;
+}
+
+.footer a{
+    color: #fff;
+    font-size: 14px;
+    text-decoration: underline;
+}
+
+.footer a:hover{
+    color: #b3b3b3;
+}
+
+
+@media (max-width: 1000px){
+    .moredetails-grid{
+        grid-template-columns: 1fr;
+    }
+    .imgs img,
+    .imgs-2 img{
+        width: 24%;
+        height: 260px;
+    }
+}
+
+
+@media (max-width: 700px){
+    .logo{
+        padding: 10px 16px;
+    }
+    .logo img{
+        height: 46px;
+        width: 25px;
+        object-fit: cover;
+        object-position: left center;
+        mix-blend-mode: saturation;
+    }
+
+    .first-nav{
+        width: 100%;
+        border-radius: 0;
+        background: #000;
+        margin-bottom: 8px;
+    }
+
+    .video-wrapper{
+        height: auto;
+        width: 96%;
+        border-radius: 18px 18px 0 0;
+        border-bottom: none;
+        background: transparent;
+    }
+
+    .video-wrapper::after{
+        display: none;
+    }
+
+    video{
+        height: 230px;
+        border-radius: 18px 18px 0 0;
+    }
+
+    .overlay-content{
+        position: static;
+        width: 100%;
+        max-width: 420px;
+        margin: -90 auto 0;
+        padding: 0 20px 30px;
+        background: linear-gradient(#0d0e0e, #000);
+    }
+
+    .movie-logo{
+        text-align: center;
+        margin: 0 0 16px;
+    }
+
+    .movie-logo img{
+        height: 60px;
+        margin: 0 auto;
+    }
+
+    .email-input{
+        height: 60px;
+    }
+
+    .imgs img,
+    .imgs-2 img{
+        width: 48%;
+        height: 240px;
+    }
+
+    .discover h2{
+        font-size: 15px;
+        left: 15px;
+        right: 15px;
+    }
+
+    .footer{
+        padding: 30px 24px 50px;
+    }
+}
